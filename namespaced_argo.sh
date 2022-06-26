@@ -31,7 +31,7 @@ kubectl create rolebinding argocd-manager-role-binding \
 export argocd_manager_sa_secret=$(kubectl get serviceaccount argocd-manager --output=json --namespace=$main_namespace | jq --raw-output .secrets[].name)
 
 # Grab the token from the secret
-export argocd_manager_token=$(kubectl get secret $argocd_manager_sa_secret --output=json --namespace=$main_namespace | jq --raw-output .data.token)
+export argocd_manager_token=$(kubectl get secret $argocd_manager_sa_secret --output=json --namespace=$main_namespace | jq --raw-output .data.token | base64 --decode)
 
 # Create argocd-managed secret
 kubectl delete secret cluster-kubernetes.default.svc-argocd-managed --ignore-not-found --namespace=$main_namespace
