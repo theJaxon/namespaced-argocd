@@ -12,6 +12,11 @@ An attempt to automate namespaced argocd deployment
 - Till the blog is back online you can [view an archived version](https://web.archive.org/web/20201221142008/https://blog.andyserver.com/2020/12/argocd-namespace-isolation/) 
 ---
 
+### Prerequisites
+- [Kustomize](https://github.com/kubernetes-sigs/kustomize) should be in the PATH
+
+---
+
 ### How to use 
 
 ```bash
