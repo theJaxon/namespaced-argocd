@@ -31,3 +31,9 @@ chmod +x namespaced_argo.sh
 # Run the script 
 ./namespaced_argo.sh
 ```
+
+---
+
+### Refining Permissions 
+- Add the needed permissions in [`argocd-manager-role.yaml`](https://github.com/theJaxon/namespaced-argocd/blob/main/argocd-manager-role.yaml), these permissiosns should represent all the permissions granted to namespace admin 
+- Allow ArgoCD to manage only some specific set of resources via [`argocd-cm`](https://github.com/theJaxon/namespaced-argocd/blob/main/argocd-cm.yaml) resource inclusions.
