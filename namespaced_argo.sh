@@ -9,6 +9,9 @@ kubectl apply --filename=https://github.com/argoproj/argo-cd/blob/master/manifes
 # Install application CRD
 kubectl apply --filename=https://github.com/argoproj/argo-cd/blob/master/manifests/crds/application-crd.yaml?raw=true
 
+# Install AppSet CRD
+kubectl apply --filename=https://github.com/argoproj/argo-cd/blob/master/manifests/crds/applicationset-crd.yaml?raw=true
+
 # Main namespace is where argocd will be deployed
 export main_namespace=main 
 export target_namespaces=target1,target2
