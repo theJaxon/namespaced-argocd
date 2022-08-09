@@ -6,6 +6,7 @@ An attempt to automate namespaced argocd deployment
 - [CRDs include](https://github.com/argoproj/argo-cd/tree/master/manifests/crds)
   1. applications.argoproj.io
   2. appprojects.argoproj.io
+  3. applicationsets.argoproj.io
 - Optional CRD that can be handy is [ApplicationSet CRD](https://github.com/argoproj/argo-cd/blob/master/manifests/crds/applicationset-crd.yaml)
 - namespaced argocd is benefecial in situations where the deployment is happening on a multi-tenant kubernetes cluster where you don't play the role of a cluster admin so the idea is to deploy argocd with limited privileges
 - For this you can refer to this really great article by [Andrew Block](https://blog.andyserver.com/2020/12/argocd-namespace-isolation/) to get an idea of what initial implementation should look like
